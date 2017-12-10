@@ -1,0 +1,10 @@
+.featured-items {
+  list-style: none;
+}
+.featured-item {
+  display: flex;
+  flex-direction: column;
+}
+.featured-item img {
+  width: 200px;
+}

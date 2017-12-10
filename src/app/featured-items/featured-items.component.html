@@ -1,0 +1,8 @@
+<ul class="featured-items">
+  <li *ngFor="let item of items; trackBy: trackByItems">
+    <div class="featured-item">
+      <img src="assets/{{ item.photo }}" alt="{{ item.name }}" />
+      {{ item.name }} ( Category: {{ item.category }})
+    </div>
+  </li>
+</ul>

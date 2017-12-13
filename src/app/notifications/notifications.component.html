@@ -1,3 +1,13 @@
-<p>
-  notifications works!
-</p>
+<div class="inbox" (click)="showMessages()">
+  new sales
+  <div [ngClass]="{ 'count': true, 'check': messages.length }">{{ messages.length }}</div>
+  <div
+    class="messages-dropdown" *ngIf="messagesShown"
+  >
+    <ul>
+      <li *ngFor="let message of messages">{{ message }}</li>
+    </ul>
+    <div class="close" (click)="hideMessages()">Close</div>
+  </div>
+</div>
+<div class="notification"></div>

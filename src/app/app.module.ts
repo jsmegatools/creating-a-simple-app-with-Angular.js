@@ -11,6 +11,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ItemsService } from './items.service';
+import { NotificationsService } from './notifications.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { ItemsService } from './items.service';
     AppRoutingModule,
     MatCardModule,
   ],
-  providers: [ItemsService],
+  providers: [ItemsService, NotificationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

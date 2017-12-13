@@ -1,10 +1,30 @@
 .featured-items {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .featured-item {
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
 }
 .featured-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.featured-item-card {
   width: 200px;
+  margin-bottom: 20px;
+}
+.item-card-content {
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.card-image-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

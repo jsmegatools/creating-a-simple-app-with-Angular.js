@@ -1,8 +1,18 @@
 <ul class="featured-items">
-  <li *ngFor="let item of items; trackBy: trackByItems">
+  <li *ngFor="let item of items; trackBy: trackByItems" class="featuerd-item-container">
     <div class="featured-item">
-      <img src="assets/{{ item.photo }}" alt="{{ item.name }}" />
-      {{ item.name }} ( Category: {{ item.category }})
+      <mat-card class="featured-item-card">
+        <a routerLink="/product/{{ item.id }}">
+          <div class="card-image-container">
+            <img mat-card-image src="assets/{{ item.photo }}" alt="{{ item.name }}">
+          </div>
+        </a>
+        <mat-card-content class="item-card-content">
+          <p>
+            {{ item.name }} ( Category: {{ item.category }})
+          </p>
+        </mat-card-content>
+      </mat-card>
     </div>
   </li>
 </ul>

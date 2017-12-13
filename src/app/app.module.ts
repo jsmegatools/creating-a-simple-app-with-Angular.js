@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { FeaturedItemsComponent } from './featured-items/featured-items.component';
@@ -10,6 +10,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { AppRoutingModule } from './/app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { ItemsService } from './items.service';
 
 
 @NgModule({
@@ -24,9 +25,10 @@ import { ProductPageComponent } from './product-page/product-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
   ],
-  providers: [],
+  providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

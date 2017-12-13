@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Item from '../item';
-import Items from '../mock_data';
+import { ItemsService } from '../items.service';
 
 @Component({
   selector: 'app-featured-items',
@@ -9,7 +9,9 @@ import Items from '../mock_data';
 })
 export class FeaturedItemsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private itemsService: ItemsService
+  ) { }
 
   items: Item[]
 
@@ -17,7 +19,8 @@ export class FeaturedItemsComponent implements OnInit {
 
   ngOnInit() {
     const featuredItems: Item[]
-      = Items.sort( function() { return 0.5 - Math.random() } )
+      = this.itemsService.getItems()
+      .sort( function() { return 0.5 - Math.random() } )
     this.items = featuredItems;
   }
 
